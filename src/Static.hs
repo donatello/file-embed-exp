@@ -4,8 +4,9 @@ module Static
     ) where
 
 import qualified Data.ByteString as B
-import           Data.FileEmbed  (embedFile)
 import           System.IO       (FilePath)
 
+import           EmbedFile       (embedFile)
+
 embedList :: [(FilePath, B.ByteString)]
-embedList = [("mypath", $(embedFile "build/10mb"))]
+embedList = [("mypath", $(embedFile "build/3mb"))]
